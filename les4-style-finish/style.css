@@ -1,0 +1,63 @@
+html{
+    background-color: whitesmoke;
+}
+
+
+#fotoslider{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+    transition-property: left;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#viewport {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    width: 400px;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.foto{
+    width: 400px;
+    height: 300px;
+}
+
+#controls{
+    margin: 8px;
+}
+
+#vorige-btn{
+    padding: 8px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#volgende-btn{
+    padding: 8px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#centered{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
