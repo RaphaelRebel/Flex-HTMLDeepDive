@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function haalElementOp(){
+
+        
+        let fotoslider = document.getElementById("fotoslider");
+
+        let eersteFotoDiv = document.querySelector(".foto");
+
+        let alleFotoDivs = document.querySelectorAll('.foto');
+        
+        console.log(alleFotoDivs);      
+
+        console.log(eersteFotoDiv);
+
+        console.log(fotoslider);
+
+        fotoslider.className = 'fotoslider';
+
+// Inhoud tussen tags aanpassen
+fotoslider.innerHTML = 'Fotoslider';
+
+//  Style aanpassen
+fotoslider.style.borderColor = '#0000FF';
+fotoslider.style.borderStyle = 'solid';
+fotoslider.style.borderWidth = '5px';
+fotoslider.position = 'absolute';
+fotoslider.left = '100px';
+
+}
+
+        window.addEventListener("DOMContentLoaded", haalElementOp)
+    </script>
+</head>
+<body>
+    <div id="fotoslider">
+        <div class="foto"> <img src="foto1.jpg" alt="Een foto"></div>
+        <div class="foto"><img src="foto2.jpg" alt="Een foto"></div>
+        <div class="foto"> <img src="foto3.jpg" alt="Een foto"></div>
+        <div class="foto"> <img src="foto4.jpg" alt="Een foto"></div>
+        <div class="foto"> <img src="foto5.jpg" alt="Een foto"></div>
+    </div>
+</body>
+</html>

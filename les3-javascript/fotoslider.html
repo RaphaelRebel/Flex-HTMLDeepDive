@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+    <script>
+
+      let fotonummer, fotobreedte, aantalfotos, fotoslider;
+
+      function setupFotoSlider() {
+        fotonummer = 0;
+        fotobreedte = 400;
+
+        fotoslider = document.getElementById('fotoslider');
+         
+        let volgendeKnop = document.getElementById('volgende-btn');
+        let vorigeKnop = document.getElementById('vorige-btn');
+        aantalfotos = fotoslider.children.length;
+        volgendeKnop.addEventListener("click", volgendefoto);
+            
+    }
+   
+
+
+      function volgendefoto(){
+          
+          fotonummer +=1;
+          if (fotonummer === aantalfotos) {
+              fotonummer = 0;
+          }
+          let afstandNaarLinks = -1 * (fotonummer * fotobreedte)
+
+          fotoslider.style.left = afstandNaarLinks + "px";
+      }
+
+
+      // Dit wordt uitgevoerd als de pagina helemaal geladen is
+      document.addEventListener("DOMContentLoaded", setupFotoSlider);
+     
+    </script>
+  </head>
+  <body>
+
+    
+    <div id="viewport">
+      <div id="fotoslider">
+        <div class="foto"><img src="foto1.jpg" /></div>
+        <div class="foto"><img src="foto2.jpg" /></div>
+        <div class="foto"><img src="foto3.jpg" /></div>
+        <div class="foto"><img src="foto4.jpg" /></div>
+        <div class="foto"><img src="foto5.jpg" /></div>
+      </div>
+    </div>
+
+    <div id="controls">
+      <button id="vorige-btn">vorige</button>
+      <button id="volgende-btn">volgende</button>
+    </div>
+   
+    
+  </body>
+</html>
